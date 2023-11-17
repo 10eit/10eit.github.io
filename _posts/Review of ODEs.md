@@ -1,0 +1,122 @@
+---
+layout: post
+title: "Basic concepts in ODEs"
+date: 2023-11-17
+author: 可爱猪仔
+tags: [Applied ODE, Complex System modeling]
+---
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
+#### Basic Notions
+
+An ODE of the $k$ -th order is in the expression of the form
+$$
+\frac{\mathrm{d}^kx}{\mathrm{d}t^k}=f\left(t,x,\frac{\mathrm{d}x}{\mathrm{d}t},\ldots,\frac{\mathrm{d}^{k-1}x}{\mathrm{d}t^{k-1}}\right)
+$$
+A function $\phi (x)$ is called a solution to above ODE on the interval $I=(a, b)$ if this function $k$ times continously differentiable on $I$ or say that $\phi\in C^{k}(I,\mathbb{R})$ .
+
+An ODE plus the initial conditions are called an initial value problem (IVP for short) or Cauchy's problem.
+#### Malthus population model
+We will denote $N (t)$ as the number of individuals in a given populations at time moment $t$ . Then the population number changes during a short time interval $h$ we have
+$$
+N(t+h)=N(t)+bh(t)-dhN(t)
+$$
+where $b$ and $d$ here stands for birth rate and death rate, and then we will have 
+$$
+\frac{N(t+h)-N(t)}{h}=(b-d)N(t)
+$$
+if we postulate that the existence of derivative, then we will have
+$$
+\frac{\mathrm{d}N}{\mathrm{d}t}=(b-d)N
+$$
+if we denote $b-d$ as a parameter $m$ and then we will have the population growth model to be an IVP
+$$
+\dot{N}=mN,N(0)=N_0
+$$
+where $N(t)$ is the population size at time moment $t$.
+But we cannot always know the direct form of the model, maybe we can use assume that the law of growth has the general form:
+$$
+\dot{N}=NF(N)
+$$
+Where $F$ is some function, which has to be negative for sufficiently large values of $N$ , if this function is smooth enough, we have its Taylor formula aroung $N=0$ as
+$$
+F(N)=F(0)+\frac{F'(0)}{1!}N+\frac{F''(0)}{2!}N^2+o(N^2)
+$$
+If we only keep up constant term and them we will have the euqation
+$$
+\dot{N}=mN
+$$
+where $m=N(0)$, and if you keep two terms we will have
+$$
+\dot{N}=NF(N)=N(F(0)+F'(0)N)=mN\left(1-\frac{N}{K}\right)
+$$
+where $K=-F(0)/F'(0)$ to be another parameter called $K$ in above equation.
+#### Well -posed problems
+(Salomon Hadamard) A mathematical problem is well posed if
+* its solution exists.
+* its solution is unique.
+* its solution depends continously on the initial data.
+
+**Theorem(local uniqueness)**
+Consider the IVP and assume that function $f$ is continous in $t$ and continously differentiable in $x$ for $(t,x)\in (a,b)\times(c,d)$ for some constant $a,b,c,d$, assume that $(t_0,x_0)\in(a,b)\times(c,d)$ then there exists am $\epsilon>0$ such that the solution $\phi(x,t)$ to the equation exists and unique for $t\in(t_0-\epsilon,t_0+\epsilon)$.
+
+However the theorem is local, it only guarantees that the solution exists and unique on some smaller interval $(t_0-\epsilon,t_0+\epsilon)\subseteq (a,b)$. However the solution of ODE can **below up** i.e. approach inifinity for a finite $t$.
+
+Examples of the uniqueness theorem.
+Consider the ODE
+$$
+\dot{x}=1+x^2=f(t,x)
+$$
+the right hand side is a polynomial for any $(t,x)\in\mathbb{R}$, its solution is given by
+$$
+x(t)=\tan{(t+C)}
+$$
+and hence for each fixed $C$ is defined only on the interval $(-\pi/2-C,\pi/2-C)$.
+
+Consider the ODE
+$$
+\dot{x}=\sqrt{x},x(0)=x_0,x\geq0
+$$
+One solution can be given as
+$$
+x(t)=\frac{(t+2\sqrt{x_0})^2}{4}
+$$
+if $x_0=0$ then the solution is exactly $x(t)=0$, therefore the solution is not unique!
+A strong theorem on IVP is given below
+
+**Theorem**
+Let IVPs satisfy the local conditions, where two IVPs is defined as
+$$
+\begin{gathered}
+\dot{x}=f(x,t),x(t_0)=x_0\\\dot{x}=f(x,t),x(t_0)=x_1
+\end{gathered}
+$$
+and $t\mapsto x_0(t)$ and $t\mapsto x_1(t)$ be the solution to IVP at the same time $t$ and then we will have
+$$
+|x_1(t)-x_0(t)|\leq |x_1-x_0|\mathrm{e}^{L|t-t_0|}
+$$
+where $L$ is a constant that depends on $f$.
+
+Above theorem shows that the solution to a first order ODE depends continously on the initial condition.
+
+#### Visualizing the solution
+Consider the ODE
+$$
+\dot{x}=\sin{x}
+$$
+and we plot out its solutions.
+<img src="https://i.mji.rip/2023/11/17/9f48a11b019613d1dcbd25486a5f5fa0.png" alt="9f48a11b019613d1dcbd25486a5f5fa0.png" style="zoom:50%;" />
+
+
+
