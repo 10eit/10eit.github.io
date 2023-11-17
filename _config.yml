@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 咕咕咕咕~
+title: 绿色猪头的博客
 email: ylfu21@m.fudan.edu.cn
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # This means to ignore newlines until "baseurl:"
   这个博客我用于放一些我自己的笔记和一些自己的想法，但是肯定很容易咕咕咕咕咕的.jpg
 github_username:  10eit
 
@@ -28,6 +28,10 @@ github_username:  10eit
 theme: minima
 plugins:
   - jekyll-feed
+
+markdown: kramdown
+kramdown:
+    input: GFM
 
 # Exclude from processing.
 # The following items will not be processed, by default.
