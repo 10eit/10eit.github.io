@@ -4,6 +4,8 @@ title: 关于我
 permalink: /about/
 ---
 
+（2023 年 11 月更新）最近在玩 [Natural Number Games](https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/index2.html) 并且在做一些神经语言学相关的实验。
+
 （2023 年暑假更新）我目前是五角场职业文秘学校一名理论烧开水与应用烧开水专业的大二本科生（秋季就大三了，好老了.jpg），但~~由于我学不会物理~~我对计算神经科学与数理逻辑都感兴趣。
 
 这是我的博客，我使用了 [Jekyll](https://jekyllrb.com/) 和 [GitHub Pages](https://pages.github.com/) 搭建了它。
