@@ -1,5 +1,7 @@
 ---
 title: "从紧致性到量词消去"
+theme: logic
+featured: true
 tags: [数理逻辑, 证明论]
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "辐射探测小结"
+theme: physics-modeling
 tags: [核物理, 粒子探测]
 ---
 

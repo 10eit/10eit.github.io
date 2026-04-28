@@ -1,5 +1,6 @@
 ---
 title: "证明论基础笔记"
+theme: logic
 tags: [数理逻辑, 证明论]
 ---
 

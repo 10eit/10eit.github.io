@@ -1,5 +1,7 @@
 ---
 title: "一些甜品级科研的感悟"
+theme: neuro
+featured: true
 tags: [受苦]
 ---
 

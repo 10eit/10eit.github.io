@@ -8,6 +8,12 @@ github_username: 10eit
 
 theme: minima
 
+header_pages:
+  - logic.markdown
+  - neuro.markdown
+  - physics-modeling.markdown
+  - 关于我.markdown
+
 plugins:
   - jekyll-feed
 
