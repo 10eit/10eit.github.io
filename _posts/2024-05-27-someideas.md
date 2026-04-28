@@ -1,21 +1,7 @@
 ---
-layout: post
 title: "一些甜品级科研的感悟"
-date: 2024-05-27
-author: 绿色猪头
 tags: [受苦]
 ---
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 
 做甜品科研已经做了快一年了，一个直观感受就是我确实不适合做科研，因为我没有那种 insights 能把好东西想出来，但是粪一点的 idea 我也不喜欢。找工作当然在任何时候都是一个很合理的选项。
 
