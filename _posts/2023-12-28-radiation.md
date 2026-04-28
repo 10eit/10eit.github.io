@@ -1,22 +1,7 @@
 ---
-layout: post
-title: "辐射探测期末复习提纲"
-date: 2023-12-28
-author: 绿色猪头
-tags: [Nuclear Physics]
+title: "辐射探测小结"
+tags: [核物理, 粒子探测]
 ---
-
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 
 ### 统计学基础
 

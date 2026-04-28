@@ -4,6 +4,10 @@ title: About Me 关于我
 permalink: /about/
 ---
 
+(更新 2026 年五一假期之前)
+
+已经去工业界啦，感谢大家支持。
+
 (Updated Summer 2025)  
 I'm Yanlin Fu, an undergraduate at Fudan University who is currently **open to jobs market** and **PhD positions** in computational cognitive neuroscience, BCI, or AI. My research focuses on human language processing using high-temporal-resolution imaging techniques like MEG. I advocate for Chinese Open Science and am developing streamlined MEG/EEG analysis pipelines—covering preprocessing, group-level/surrogate decoding, searchlight decoding, spectral analysis, and geometry analysis—with high-speed parallelization for broader accessibility (RSA part and decoding part is undergoing code review and unit test and have been set to private repository now). 
 
