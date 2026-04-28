@@ -28,8 +28,7 @@ $$
 > **定理** 
 > 考虑 $\mathcal{L}$-理论 $T$，假设 $T$
 > 有无穷个模型，或者更一般的，对于每个 $n < \omega$，$T$
-> 都有不小于 $n$ 大小的模型。则对于任意的 $\kappa \geq |
-> \mathcal{L} |$，$T$ 有大小至少为 $\kappa$ 的模型。
+> 都有不小于 $n$ 大小的模型。则对于任意的 $\kappa \geq \mathcal{L}$，$T$ 有大小至少为 $\kappa$ 的模型。
 >
 > **证明.**
 > 仿照之前的证明，令 $\mathcal{L}' = \mathcal{L} \cup \{
@@ -195,9 +194,10 @@ $z$ 使得 $x < y < z$。
 随机图的理论 $T_{\text{rand}}$ 由图公理和下面的公理集合
 $\{ \phi_{n, m} : n, m \in \mathbb{N} \}$ 组成，其中公理 $\phi_{n,
 m}$ 定义为：
+
 $$
 \forall y_1, \cdots, y_{n + m}  \left( \bigwedge_{i = 1}^{n + m - 1}
-\bigwedge_{j = i + 1}^{n + m} y_i \neq y_j \right) \rightarrow \exists x
+\bigwedge_{j = i + 1}^{n + m} y_i \neq y_j \right) \rightarrow \\ \exists x
 \left( \bigwedge_{i = 1}^n x E y_i \wedge \bigwedge_{i = n + 1}^{n + m}
 \neg (x \wedge y_i) \wedge \bigwedge_{i = 1}^{n + m} (x \neq y_i) \right)
 $$
