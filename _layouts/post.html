@@ -3,13 +3,8 @@ layout: default
 ---
 
 {% if page.mathjax %}
-<script>
-window.MathJax = {
-  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
-  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
-};
-</script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="{{ '/assets/js/mathjax-config.js' | relative_url }}"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
 {% endif %}
 
 <article class="post-container">
