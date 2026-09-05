@@ -1,7 +1,6 @@
 ---
 title: "n步自举法"
 date: 2023-05-17
-theme: neuro
 tags: [Computational Neuroscience, PDF Notes]
 ---
 

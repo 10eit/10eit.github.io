@@ -1,6 +1,5 @@
 ---
 title: "证明论基础笔记"
-theme: logic
 tags: [数理逻辑, 证明论]
 ---
 
@@ -21,9 +20,12 @@ $\exists \alpha=\neg(\forall \neg \alpha)$ 得到）、变元集合、常元集�
 
 一些例子：
 
-1.  公理化集合论的语言： $$\mathcal{L}_{set}=\{\neq,\in\}$$
+1.  公理化集合论的语言：
+
+    $$\mathcal{L}_{set}=\{\neq,\in\}$$
 
 2.  初等数论的语言 $\mathsf{PA}$：
+
     $$\mathsf{PA}=\{\neq,<,0,\mathsf{S},+,\times\}$$
 
 3.  序关系的语言只需要一个二元谓词表示序关系。
@@ -60,15 +62,20 @@ $\exists \alpha=\neg(\forall \neg \alpha)$ 得到）、变元集合、常元集�
 
 对于 $\mathsf{PA}$ 来说，我们有下面的一些公理与推论，以及他们的形式化：
 
-1.  $0$ 不是任何自然数的后继： $$\forall x(\mathsf{S}x\neq 0).$$
+1.  $0$ 不是任何自然数的后继：
+
+    $$\forall x(\mathsf{S}x\neq 0).$$
 
 2.  两个自然数的后继数相等，当且仅当这两个自然数相等。
+
     $$\forall x\forall y (x\neq y\leftrightarrow \mathsf{S}x\neq\mathsf{S}y)$$
 
 3.  数学归纳法：
+
     $$(\phi(0)\wedge\forall x(\phi(x)\to\phi(\mathsf{S}x)))\to \forall x(\phi(x)).$$
 
 4.  质数判定：
+
     $$(\mathsf{S}0<x)\wedge\forall y\forall z((y<x\wedge z<x)\to y\times z\neq x).$$
 
 ### 自由出现与约束出现
@@ -92,11 +99,15 @@ $\exists \alpha=\neg(\forall \neg \alpha)$ 得到）、变元集合、常元集�
 
 3.  $(\alpha\to\beta)^x_t=(\alpha_t^x\to\beta_t^x)$
 
-4.  带量词的替换规则 $$(\forall y\alpha)_t^{x}=
-            \begin{cases}
-                \forall y(\alpha_t^x)& x\neq y\\
-                \forall y\alpha & x=y
-            \end{cases}$$
+4.  带量词的替换规则
+
+    $$
+    (\forall y\alpha)_t^{x}=
+    \begin{cases}
+        \forall y(\alpha_t^x)& x\neq y\\
+        \forall y\alpha & x=y
+    \end{cases}
+    $$
 
 
 ## 一阶逻辑的证明论
@@ -104,15 +115,19 @@ $\exists \alpha=\neg(\forall \neg \alpha)$ 得到）、变元集合、常元集�
 ### 公理系统
 
 与命题逻辑一样，我们定义公式序列：
+
 $$
 (\alpha_0,\alpha_1,\ldots,\alpha_n)
 $$
+
 使得 $\alpha_n=\phi$ 并对与所有的 $i\leq n$ 我们都有 $\alpha_i\in\Gamma\cup \Lambda$ 为公式集和公理集中的公式或者来自前面序列通过分离规则得到的。
 
 首先，我们称一个公式 $\phi$ 是公式 $\psi$ 的一个**全称概括**或者概括，如果存在 $n\geq 0$ 和变元 $x_1,x_2,\ldots,x_n$ 使得：
+
 $$
 \phi=\forall x_1\forall x_2\ldots\forall x_n\psi
 $$
+
 当 $n=0$ 时，$\psi$ 的全称概括就是其本身。下面考虑一阶逻辑的推演系统与公理模式。
 
 **定义 6**. 
@@ -122,16 +137,19 @@ $$
 1. (A1-A3)  $\mathsf{Prop}$ 中的三条公理的一阶逻辑版本；
 
 2.  项 $t$ 可以在 $\alpha$ 中替换 $x$，那么我们有：
+
     $$\forall x\alpha\to\alpha_t^x$$
 
 3.  $\forall x(\alpha\to\beta)\to(\forall x\alpha\to\forall x\beta)$
 
-4.  若 $x$ 不在 $x$ 中自由出现，则 $\alpha\to\forall x\alpha$。
+4.  若 $x$ 不在 $\alpha$ 中自由出现，则 $\alpha\to\forall x\alpha$。
 
 A1-A3 其实说明了一件事，那么就是所有的一阶意义下的重言式都是一阶逻辑证明系统中的一个公理模式，考虑下面的公式：
+
 $$
 (\forall y\neg Py\to\neg Px)\to(Px\to\neg\forall y\neg Py)
 $$
+
 它对应的 $\mathsf{Prop}$ 中的语句为 $(A_1\to \neg A_2)\to(A_2\to\neg A_1)$ 显然是重言式。
 
 **定理 1**. 
@@ -142,14 +160,18 @@ $$
 
 语法层面的操作可能会影响语义，例如我们考虑下面的例子。
 
-令 $\alpha$ 为一阶公式 $\exists y (x\neg y)$，考虑替换公理 $\forall x\alpha\to\alpha_z^{x}$ 可以得到：
+令 $\alpha$ 为一阶公式 $\exists y (x\neq y)$，考虑替换公理 $\forall x\alpha\to\alpha_z^{x}$ 可以得到：
+
 $$
 \forall x\exists y (x\neq y)\to\exists y (z\neq y)
 $$
+
 但是如果我们考虑 $\forall x\alpha\to\alpha_y^{x}$，我们会得到：
+
 $$
 \forall x\exists y (x\neq y)\to\exists y (y\neq y)
 $$
+
 是语义上为假的语句，由于我们替换的变元实际上是原公式中的约束变元，因此我们需要更严格定义"$t$在
 $\alpha$ 中可以替换 $x$"：
 
@@ -176,9 +198,11 @@ $\alpha$ 中可以替换 $x$"：
 **证明 1**. 
 
 即证明 $\vdash (\forall x\phi\to\phi)$，由于 $x$ 在任何公式中都可以替换自己，根据替换公理我们可以得到：
+
 $$
 \forall x\phi\to \phi_x^x
 $$
+
  注意到 $\phi_x^x$ 就是 $\phi$ 本身。
 
 A5-A6被称为是概括规则（一般记作 $\mathsf{Gen}$），使用这两条公理我们可以证明概括定理。用自然语言描述概括定理即：由于证明中未使用任何关于 $x$ 的假设，因此 $\forall x\alpha(x)$。
@@ -202,28 +226,35 @@ A5-A6被称为是概括规则（一般记作 $\mathsf{Gen}$），使用这两条
 3.  若 $\phi_i$ 来自 $\phi_j$ 与 $\phi_k=\phi_j\to\phi_i$
     的分离规则，根据归纳假设我们有 $\Gamma\vdash\forall \phi_j$
     与$\Gamma\vdash\forall(\phi_j\to\phi_i)$，考虑
+
     $$\forall(\phi_j\to\phi_i)\to(\forall x \phi_j\to\forall x\phi_i)$$
+
     使用两次分离规则即可得到 $\Gamma\vdash\forall x\phi_i$。
 
-根据归纳原理，我们证明了$\Gamma\vdash\forall x\phi_n$，也即归纳定理。
+根据归纳原理，我们证明了$\Gamma\vdash\forall x\phi_n$，也即概括定理。
 
 下面看一个例子。
 
 **命题 2**. 
 
 证明：
+
 $$
 \forall x\forall y\alpha \vdash \forall y\forall x\alpha
 $$
+
 **证明 3**. 
 
-我们考虑替换定理，我们可以得到 $\forall x\forall y\vdash\alpha$，考虑变元 $x$ 在左端不是自由出现的，因此根据概括定理：
+我们考虑替换定理，我们可以得到 $\forall x\forall y\alpha\vdash\alpha$，考虑变元 $x$ 在左端不是自由出现的，因此根据概括定理：
+
 $$
 \forall x\forall y\alpha\vdash\forall x\alpha
 $$
+
 反复利用概括定理可以得到：
+
 $$
-\forall x\forall y\alpha\vdash\forall y\forall x\vdash\forall y\forall x\alpha.
+\forall x\forall y\alpha\vdash\forall y\forall x\alpha.
 $$
 
 
@@ -243,44 +274,46 @@ $$
 
 **定理 4**. 
 
-$\Gamma\cup\{\gamma\}\vdash\phi$ 当且仅当 $\Gamma\vdash(\gamma\to\phi)$。
+$\Gamma\cup\\{\gamma\\}\vdash\phi$ 当且仅当 $\Gamma\vdash(\gamma\to\phi)$。
 
 **证明 4**. 
 
-反方向只需要使用分离规则即可。我们证明正的方向。假设 $(\phi_1,\phi_2,\ldots,\phi_n)$ 是从 $\Gamma\cup\{\gamma\}$
+反方向只需要使用分离规则即可。我们证明正的方向。假设 $(\phi_1,\phi_2,\ldots,\phi_n)$ 是从 $\Gamma\cup\\{\gamma\\}$
 的一个证明序列，其中 $\phi_n=\phi$，那么我们对 $i$ 进行归纳，对于所有的 $1\leq i \leq n$，我们都有 $\Gamma\vdash (\gamma\to\phi_i)$。
 
 当 $i=1$ 时，$\phi_1$ 或者属于 $\Gamma$ 要么是一阶公理，又或者 $\gamma$本身。考虑 $\phi_1\to(\gamma\to\phi_1)$
 属于一阶公理，因此使用分离公理我们可以得到 $\Gamma\vdash(\gamma\to\phi_1)$。
 
-假定对所有的 $k<i$ 我们都有 $\Gamma\vdash(\gamma\to\phi_k)$，考虑 $\phi_i$，相比奠基步它多了一种可能，即 $\phi_j=\phi_k\to\phi_i$ 其中 $j,k<n$，那么我们考虑 $\Gamma\vdash(\gamma\to\phi_j)$ 与 $\Gamma\vdash(\gamma\vdash(\phi_k\to\phi_i))$，使用两次分离规则即可得到证明。
+假定对所有的 $k<i$ 我们都有 $\Gamma\vdash(\gamma\to\phi_k)$，考虑 $\phi_i$，相比奠基步它多了一种可能，即 $\phi_j=\phi_k\to\phi_i$ 其中 $j,k<n$，那么我们考虑 $\Gamma\vdash(\gamma\to\phi_j)$ 与 $\Gamma\vdash(\gamma\to(\phi_k\to\phi_i))$，使用两次分离规则即可得到证明。
 
 演绎定理有以下两个推论：
 
 **定理 5**. 
 
-$\Gamma\cup\{\phi\}\vdash\neg\psi$ 当且仅当 $\Gamma\cup\{\psi\}\vdash\neg\phi$。
+$\Gamma\cup\\{\phi\\}\vdash\neg\psi$ 当且仅当 $\Gamma\cup\\{\psi\\}\vdash\neg\phi$。
 
 这被称为是**逆否命题**。
 
 **证明 5**. 
 
 也即想办法证明 $(\phi\to\neg\psi)\to(\psi\to\neg\phi)$。最简单的方法是直接使用真值表，另外一种方法我们考虑：
+
 $$
 (\phi\to\neg\psi)\to(\psi \to\neg\phi)
 $$
+
  通过分离规则即可。 
 
 下面证明的内容是反证法。
 
 **定理 6**. 
 
-如果 $\Gamma\cup\{\phi\}$ 不一致，那么 $\Gamma\vdash\neg\phi$。
+如果 $\Gamma\cup\\{\phi\\}$ 不一致，那么 $\Gamma\vdash\neg\phi$。
 
 接下来介绍以下使用演绎定理证明命题的一些经验。
 
 1.  如果 $\phi$ 是 $(\psi\to\theta)$，那么尝试证明
-    $\Gamma\cup\{\psi\}\vdash\theta$（在 `lean` 中使用 `intros` 指令）。
+    $\Gamma\cup\\{\psi\\}\vdash\theta$（在 `lean` 中使用 `intros` 指令）。
 
 2.  如果 $\phi$ 是 $\forall x\psi$，如果 $x$ 不在 $\Gamma$
     中自由出现，则根据概括定理，只需要证明 $\Gamma\vdash\psi$。
@@ -303,9 +336,11 @@ $$
 **命题 3**. 
 
 证明：
+
 $$
 \forall x\neg(\alpha\to\beta)\vdash \neg(\alpha\to\exists x\beta).
 $$
+
 **证明 6**. 
 
 考虑证明 $\forall x\neg(\alpha\to\beta)\vdash\alpha$ 与 $\forall x\neg(\alpha\to\beta)\vdash\neg\exists x\beta$。考虑第一条我们知道 $\forall x\neg(\alpha\to\beta)\vdash\neg(\alpha\to\beta)$，而 $\neg(\alpha\to\beta)$ 重言蕴含 $\alpha$，因此前半段证明完毕。
@@ -324,7 +359,8 @@ $\Gamma\vdash\phi_y^{c}$。也即存在一个从 $\Gamma$ 到 $\forall y\phi_y^c
 下面的引理为约束变元的替换提供了依据。
 
 **定理 8**. 如果变元 $y$ 完全不在公式 $\phi$ 中出现，则变元 $x$
-可以在公式 $\phi_y^x$ 中替换 $y$ 并且我们有： 
+可以在公式 $\phi_y^x$ 中替换 $y$ 并且我们有：
+
 $$
 ( \phi_y^x)_x^y=\phi
 $$
@@ -333,14 +369,24 @@ $$
 
 **定义 8**. 
 
-谓词演算的公式 $\phi$ 被称为是前束范式（prenex normal form）如果它形如：$$Q_1x_1Q_2x_2\ldots Q_kx_k B$$ 其中每个$Q_i\in\{\forall,\exists\}$ 而 $B$ 是不含量词的公式。
+谓词演算的公式 $\phi$ 被称为是前束范式（prenex normal form）如果它形如：
+
+$$
+Q_1x_1Q_2x_2\ldots Q_kx_k B
+$$
+
+其中每个$Q_i\in\\{\forall,\exists\\}$ 而 $B$ 是不含量词的公式。
 
 如果谓词公式中不包含量词，那么它也是前束范式，例如：
+
 $$
 \neg A(x)\vee B(x).
 $$
+
 再例如公式：
+
 $$
 \forall x\exists y\exists z(\neg P(x)\to(Q(y)\to R(z,y)))
 $$
+
 也是前束范式。

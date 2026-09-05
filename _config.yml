@@ -1,18 +1,22 @@
-title: 绿色猪头的博客
+title: "Yanlin's Homepage"
 email: yanlin.fu2002@gmail.com
-author: 绿色猪头
+author: Yanlin Fu
 
 description: >-
+  Academic homepage and notes on mathematical logic, cognitive neuroscience,
+  artificial intelligence, physics, and mathematical modeling.
+
+lang: zh-CN
+url: "https://10eit.github.io"
 
 github_username: 10eit
 
 theme: minima
 
 header_pages:
-  - logic.markdown
-  - neuro.markdown
-  - physics-modeling.markdown
-  - 关于我.markdown
+  - writing.markdown
+  - research.markdown
+  - miscellany.markdown
 
 plugins:
   - jekyll-feed
@@ -21,11 +25,15 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+collections:
+  ideas:
+    output: false
+
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: post
-      author: 绿色猪头
+      author: Yanlin Fu
       mathjax: true

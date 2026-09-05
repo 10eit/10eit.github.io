@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'zh-CN' }}">
+  <head>
+    {% assign meta_title = page.title | default: site.title %}
+    {% assign meta_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 180 %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="{{ meta_description | escape }}">
+    <title>{% if page.title and page.url != '/' %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <link rel="icon" type="image/jpeg" href="{{ '/assets/images/green-pig.jpg' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/green-pig.jpg' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ meta_title | escape }}">
+    <meta property="og:description" content="{{ meta_description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ meta_title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | escape }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&amp;display=swap">
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/misans@4.1.0/lib/Normal/MiSans-Regular.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+  </head>
+  <body class="{% if page.lang == 'en' %}lang-en{% else %}lang-zh{% endif %}">
+    <a class="skip-link" href="#main-content">跳到正文</a>
+
+    <header class="site-header">
+      <div class="navbar">
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <label class="nav-toggle-label" for="nav-toggle" aria-label="展开导航"><span></span><span></span><span></span></label>
+
+        <nav class="site-nav" aria-label="主导航">
+          <a {% if page.url == '/' %}class="active" aria-current="page"{% endif %} href="{{ '/' | relative_url }}">主页</a>
+          <a {% if page.url == '/writing/' or page.layout == 'post' %}class="active" aria-current="page"{% endif %} href="{{ '/writing/' | relative_url }}">博客</a>
+          <a {% if page.url == '/research/' %}class="active" aria-current="page"{% endif %} href="{{ '/research/' | relative_url }}">研究</a>
+          <a {% if page.url == '/miscellany/' %}class="active" aria-current="page"{% endif %} href="{{ '/miscellany/' | relative_url }}">小玩意儿</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main-content">{{ content }}</main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© {{ 'now' | date: '%Y' }} Yanlin Fu</p>
+        <p><a href="mailto:{{ site.email }}">Email</a> · <a href="https://github.com/{{ site.github_username }}">GitHub</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

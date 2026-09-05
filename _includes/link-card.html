@@ -1,0 +1,6 @@
+{% assign card_title = include.title | default: include.url %}
+{% assign card_source = include.source | default: include.url %}
+<a class="link-card" href="{{ include.url | escape }}" target="_blank" rel="noopener noreferrer">
+  <span class="link-card-title">{{ card_title | escape }}</span>
+  <span class="link-card-source">{{ card_source | escape }}</span>
+</a>

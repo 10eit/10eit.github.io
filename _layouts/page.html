@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<article class="page-shell{% if page.page_class %} {{ page.page_class }}{% endif %}">
+  <header class="page-header">
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="page-description">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+</article>

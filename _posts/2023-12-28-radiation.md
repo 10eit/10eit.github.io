@@ -1,6 +1,5 @@
 ---
 title: "辐射探测小结"
-theme: physics-modeling
 tags: [核物理, 粒子探测]
 ---
 
@@ -75,14 +74,14 @@ gamma 射线的探测效率与 $N,E,Z$ 相关：
 $$
 \begin{align}
 I&=I_0\mathrm{e}^{-\mu t}\\
-\epsilon&= 1-\frac{I}{I_0}=1-\mathrm{e}^{\mu t}=1-\mathrm{e}^{N\sigma t}
+\epsilon&= 1-\frac{I}{I_0}=1-\mathrm{e}^{-\mu t}=1-\mathrm{e}^{-N\sigma t}
 \end{align}
 $$
 
 $N$ 是值靶物质密度，而 $\sigma$ 为三种效应的截面，它与 $Z$ 相关（也体现了 $E$），而 $t$ 为探测物质的厚度。
 
 中子与物质的相互作用：
-1. 中子的散射：弹性散射 $(n,n)$（对应核反冲法）；非弹性散射 $(n,n'\gamma)$
+1. 中子的散射：弹性散射 $(n,n)$（对应核反冲法）；非弹性散射 $(n,n\'\gamma)$
 2. 电子的俘获：辐射俘获 $(n,\gamma)$（对应活化法）；发生带电粒子$(n,\alpha)$（对应核反应法）；裂变反应 $(n,f)$（对应核裂变法）；多粒子发射 $(n,2n),(n,np)$ 
 
 弹性散射和辐射俘获是最常见的两种中子反应
