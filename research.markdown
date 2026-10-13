@@ -8,7 +8,7 @@ description: 我感兴趣的问题与朋友们合作的研究。
 
 <div class="status-note">我的兴趣非常杂，我也很享受和不同领域的人交流一些有趣的问题。我对认知科学中的表征问题(Representational Problem)非常感兴趣。</div>
 
-### 人类认知行为的神经机制
+### 人类认知行为的神经机制与脑机接口
 
 推荐阅读：
 > 1. Dehaene S, Al Roumi F, Lakretz Y et al.
@@ -26,13 +26,14 @@ Trends in Cognitive Sciences, 2022; 26, 751-766
 > 2. **Cross-cultural music processing in human brains revealed using magnetoencephalography.** @OHBM2025，我在这个工作中提供了二维决策特征的 Bayesian 建模和表征几何分析 Pipeline。
 > 3. **Within- And Cross-modality Cognitive Aggregation: subconscious cognitive processing of stimulus in unattended modality.** @ASSC2024，我在这个工作中提供了不定长神经信号的流形分析 pipeline。
 
-以及还有一篇期刊文章已经返回修改了，希望尽快能与大家见面。
+以及我的最新 Paper 在 Communications Biology 上与大家见面了：
+
+{% include link-card.html url="https://www.nature.com/articles/s42003-026-11150-7" title="Frequency-specific oscillations track parallel processing of linguistic structural and lexical-semantic information from perception to decision" source="https://www.nature.com/articles/s42003-026-11150-7" %}
 
 ### LLM 的可解释性研究
 
 推荐阅读：
-> 1.
-> 2.
+> 1.[Physics of Language Models](https://physics.allen-zhu.com/)
 
 我在这方面主要是自己会做一些简单的小实验，在可解释性研究上我的主要合作者是 [Jingshen Zhang](https://jasonzhang0702.github.io)，我们合作了两篇有意思的 Paper（一篇Under Review尚无Preprint）：
 
@@ -40,10 +41,12 @@ Trends in Cognitive Sciences, 2022; 26, 751-766
 
 我目前在研究一些特定场合下，LLM neuron 之间存在的协同/冗余效应（Synergy/Redundancy）。除了 LLM 的可解释性以外，我还关注其他的 MLLM 的可解释性研究。
 
+> 1. [Predictive Structure is Distributed Across Depth in EEG Foundation Models](https://zenodo.org/records/23028839)
+
 ### AI4Finance
 
 推荐阅读：
 > 1. [HIST: A Graph-based Framework for Stock Trend Forecasting via Mining Concept-Oriented Shared Information](https://arxiv.org/abs/2110.13716)
 > 2. [Crossformer: Transformer Utilizing Cross-Dimension Dependency for Multivariate Time Series Forecasting](https://iclr.cc/virtual/2023/poster/12023)
 
-这方面主要是和我以前的同事们会研究一些 Cross-Section Alpha Modeling 的方法，
+这方面主要是和我以前的同事们会研究一些 Cross-Section Alpha Modeling 的方法。
