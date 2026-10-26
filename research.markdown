@@ -33,11 +33,13 @@ Trends in Cognitive Sciences, 2022; 26, 751-766
 ### LLM 的可解释性研究
 
 推荐阅读：
-> 1.[Physics of Language Models](https://physics.allen-zhu.com/)
+> 1. [Physics of Language Models](https://physics.allen-zhu.com/)
+> 2. [The Geometry of Categorical and Hierarchical Concepts in Large Language Models](https://arxiv.org/abs/2406.01506)
 
-我在这方面主要是自己会做一些简单的小实验，在可解释性研究上我的主要合作者是 [Jingshen Zhang](https://jasonzhang0702.github.io)，我们合作了两篇有意思的 Paper（一篇Under Review尚无Preprint）：
+我在这方面主要是自己会做一些简单的小实验，在可解释性研究上我的主要合作者是 [Jingshen Zhang](https://jasonzhang0702.github.io)，我们合作了两篇有意思的 Paper：
 
-> 1. [Modeling Implicit Conflict Monitoring Mechanisms against Stereotypes in LLMs](https://arxiv.org/abs/2605.09647)
+> 1. [I CAN Debias: Uncovering and Enhancing Self-debiasing Mechanisms of Social Bias in LLMs](https://arxiv.org/abs/2605.09647)
+> 2. [Do LLMs Really Lack Difference Awareness? Uncovering Heuristic Substitution in Group-Differentiating Fairness](https://arxiv.org/abs/2610.26961)
 
 我目前在研究一些特定场合下，LLM neuron 之间存在的协同/冗余效应（Synergy/Redundancy）。除了 LLM 的可解释性以外，我还关注其他的 MLLM 的可解释性研究。
 
