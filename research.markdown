@@ -28,7 +28,7 @@ Trends in Cognitive Sciences, 2022; 26, 751-766
 
 以及我的最新 Paper 在 Communications Biology 上与大家见面了：
 
-{% include link-card.html url="https://www.nature.com/articles/s42003-026-11150-7" title="Frequency-specific oscillations track parallel processing of linguistic structural and lexical-semantic information from perception to decision" source="https://www.nature.com/articles/s42003-026-11150-7" %}
+{% include publication.html paper=site.data.publications.linguistic_processing %}
 
 ### LLM 的可解释性研究
 
@@ -43,7 +43,7 @@ Trends in Cognitive Sciences, 2022; 26, 751-766
 
 我目前在研究一些特定场合下，LLM neuron 之间存在的协同/冗余效应（Synergy/Redundancy）。除了 LLM 的可解释性以外，我还关注其他的 MLLM 的可解释性研究。
 
-> 1. [Predictive Structure is Distributed Across Depth in EEG Foundation Models](https://zenodo.org/records/23028839)
+{% include publication.html paper=site.data.publications.eeg_predictive_structure %}
 
 ### AI4Finance
 

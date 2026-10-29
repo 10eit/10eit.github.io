@@ -1,0 +1,12 @@
+{% assign publication = include.paper %}
+<article class="publication" lang="en">
+  <a class="publication-image" href="{{ publication.url | escape }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | escape }}" width="{{ publication.image_width }}" height="{{ publication.image_height }}" loading="lazy" decoding="async">
+  </a>
+  <div class="publication-details">
+    <h4 class="publication-title"><a href="{{ publication.url | escape }}" target="_blank" rel="noopener noreferrer">{{ publication.title | escape }}</a></h4>
+    <p class="publication-authors">{% for author in publication.authors %}{% if author.highlight %}<strong>{{ author.name | escape }}</strong>{% elsif author.url %}<a href="{{ author.url | escape }}" target="_blank" rel="noopener noreferrer">{{ author.name | escape }}</a>{% else %}{{ author.name | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    <p class="publication-venue"><em>{{ publication.venue | escape }}</em>, {{ publication.year }}</p>
+    <p class="publication-links">{% for link in publication.links %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener noreferrer">[{{ link.label | escape }}]</a>{% unless forloop.last %} {% endunless %}{% endfor %}</p>
+  </div>
+</article>

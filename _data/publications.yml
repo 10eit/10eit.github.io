@@ -1,0 +1,48 @@
+# Metadata and figure from https://www.nature.com/articles/s42003-026-11150-7
+linguistic_processing:
+  title: "Frequency-specific oscillations track parallel processing of linguistic structural and lexical-semantic information from perception to decision"
+  url: "https://www.nature.com/articles/s42003-026-11150-7"
+  image: "/assets/images/linguistic-processing-figure1.png"
+  image_width: 1958
+  image_height: 2327
+  image_alt: "语言结构与词汇语义的实验设计、行为结果和决策模型示意图"
+  authors:
+    - name: "Yanlin Fu"
+      highlight: true
+    - name: "Zhao Xu"
+    - name: "Qinhui Yao"
+    - name: "Yangjiayi Mu"
+    - name: "Yuwei Jiang"
+      url: "https://orcid.org/0000-0002-9533-0760"
+  venue: "Communications Biology"
+  year: 2026
+  links:
+    - label: "Paper"
+      url: "https://www.nature.com/articles/s42003-026-11150-7"
+    - label: "PDF"
+      url: "https://www.nature.com/articles/s42003-026-11150-7.pdf"
+    - label: "Code"
+      url: "https://github.com/10eit/MEGLangOscillations"
+
+# Metadata and figure from https://zenodo.org/records/23028839
+eeg_predictive_structure:
+  title: "Predictive Structure is Distributed Across Depth in EEG Foundation Models"
+  url: "https://zenodo.org/records/23028839"
+  image: "/assets/images/eeg-predictive-structure.png"
+  image_width: 1519
+  image_height: 615
+  image_alt: "完整 Figure 1：读出选择、深度搜索、残差增益与迁移干预的研究框架"
+  authors:
+    - name: "Yanlin Fu"
+      highlight: true
+    - name: "Wei Liu"
+      url: "https://orcid.org/0000-0002-3840-1980"
+    - name: "Liming Zhao"
+      url: "https://orcid.org/0009-0003-5402-1587"
+  venue: "Technical Report"
+  year: 2026
+  links:
+    - label: "Report"
+      url: "https://zenodo.org/records/23028839"
+    - label: "PDF"
+      url: "https://zenodo.org/api/records/23028839/files/Predictive%20Structure%20Is%20Distributed%20Across%20Depth%20in%20EEG%20Foundation%20Models.pdf/content"
