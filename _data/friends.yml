@@ -25,3 +25,8 @@
   description: "Researcher in Mathematical Logic."
   # 该站暂未提供头像或 favicon，先使用默认占位图。
   image: ""
+
+- url: "https://xuanyiyiren.github.io/"
+  name: "Xuan Zhang"
+  description: "Researcher in Computer Graphics and CFD."
+  image: ""
