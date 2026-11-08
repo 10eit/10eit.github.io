@@ -54,19 +54,16 @@ description: 个人主页。
   <section class="home-section friend-section">
     <h2>友链</h2>
     <div class="friend-links">
-      <div class="friend-link friend-link-placeholder">
-        <strong class="friend-name">朋友的名字</strong>
-        <span class="friend-description">一句简短介绍</span>
-        <span class="friend-domain">example.com</span>
-      </div>
-
-      <!-- 新增友链时复制下面这段，并替换链接、名字、介绍和域名：
-      <a class="friend-link" href="https://example.com" target="_blank" rel="noopener noreferrer">
-        <strong class="friend-name">朋友的名字</strong>
-        <span class="friend-description">一句简短介绍</span>
-        <span class="friend-domain">example.com ↗</span>
+      {% for friend in site.data.friends %}
+      {% assign friend_image = friend.image | default: '/assets/images/friend-placeholder.svg' %}
+      <a class="friend-link" href="{{ friend.url | escape }}" target="_blank" rel="noopener noreferrer">
+        <img class="friend-avatar" src="{{ friend_image | relative_url | escape }}" alt="" width="48" height="48" loading="lazy" decoding="async" data-fallback-src="{{ '/assets/images/friend-placeholder.svg' | relative_url }}" onerror="this.onerror = null; this.src = this.dataset.fallbackSrc;">
+        <span class="friend-info">
+          <strong class="friend-name">{{ friend.name | default: '朋友的名字' | escape }}</strong>
+          <span class="friend-description">{{ friend.description | default: '一句简短介绍' | escape }}</span>
+        </span>
       </a>
-      -->
+      {% endfor %}
     </div>
   </section>
 </article>

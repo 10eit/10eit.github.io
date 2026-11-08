@@ -1,0 +1,27 @@
+# 友链按这里的顺序显示。填写 name（名字）、description（一句介绍）和 image（图片）。
+# image 可填 /assets/images/ 下的本地路径，也可填 https:// 开头的图片地址；留空使用占位图。
+- url: "https://jiajhe.github.io/"
+  name: "Jiajun He"
+  description: "Quantitative Researcher in A-share Stock Market."
+  image: "/assets/images/friends/jiajhe.jpg"
+
+- url: "https://hz-xiaxz.github.io/typst-blog/"
+  name: "Xuanzhe Xia"
+  description: "Researcher in Condense Matter Physics."
+  image: "/assets/images/friends/hz-xiaxz.svg"
+
+- url: "https://jasonzhang0702.github.io/"
+  name: "Jingshen Zhang"
+  description: "Researcher in LLM Mechanistic Interpretability."
+  image: "/assets/images/friends/jasonzhang0702.png"
+
+- url: "https://kuni05.github.io/"
+  name: "Jiayu Zuo"
+  description: "Researcher in BCI and multimodal LLMs."
+  image: "/assets/images/friends/kuni05.png"
+
+- url: "https://xiayun.click/"
+  name: "Yi Zhang"
+  description: "Researcher in Mathematical Logic."
+  # 该站暂未提供头像或 favicon，先使用默认占位图。
+  image: ""
